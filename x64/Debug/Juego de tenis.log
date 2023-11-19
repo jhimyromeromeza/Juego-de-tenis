@@ -1,0 +1,10 @@
+﻿  Juego de tenis.cpp
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\juego.h(76,6): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _kbhit. See online help for details.
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\juego.h(77,16): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Elegir_pais.h(5,1): warning C4005: 'FILAS': redefinición de macro
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\escenarios.h(7,1): message : vea la definición anterior de 'FILAS'
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Elegir_pais.h(7,1): warning C4005: 'COLUMNAS': redefinición de macro
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\escenarios.h(8,1): message : vea la definición anterior de 'COLUMNAS'
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(91,28): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  AssemblyInfo.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Juego de tenis.vcxproj -> C:\Users\P65 CREATOR\source\repos\Juego de tenis\x64\Debug\Juego de tenis.exe
