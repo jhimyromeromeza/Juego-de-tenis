@@ -288,3 +288,18 @@ void pintarLineas() {
     gotoxi(49, 28); printf("vs");
     gotoxi(49, 36); printf("vs");
 }
+void pintarLineas_2() {
+    for (int i = 19; i < 42; i++) {
+        gotoxi(i, 4); printf("%c", 205);
+        gotoxi(i, 12); printf("%c", 205);
+        
+    }
+    for (int i = 58; i < 80; i++) {
+        gotoxi(i, 4); printf("%c", 205);
+        gotoxi(i, 12); printf("%c", 205);
+        
+    }
+    gotoxi(49, 4); printf("vs");
+    gotoxi(49, 12); printf("vs");
+    
+}

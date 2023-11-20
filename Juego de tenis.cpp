@@ -4,7 +4,7 @@
 #include <windows.h>
 #include "juego.h"  
 #include <stdio.h>
-#include "escenarios.h"
+#include "copa.h"
 #include "Elegir_pais.h"
 #include "tabla_de_posiciones.h"
 
@@ -52,10 +52,13 @@ void presentacion() {
 }
 
 int main() {
-    int option;
+    int option, resultado, resultado_2, resultado_3;
     int Seleccion;
     presentacion();
     gotoxi(24, 5 + 17);
+    jugador_1 N(65, 12, 0, 0);
+    jugador_2 N2(65, 12, 0, 0);
+    jugador_3 N3(65, 12, 0, 0);
     printf("Elige una opcion: ");
     cin >> option;
 
@@ -88,25 +91,96 @@ int main() {
             tabla_Uruguay();
             tabla_Chile();
             pintarLineas();
+            gotoxi(35, 18); printf("Presione enter para comenzar: ");
             char empezar = getch();
             if (empezar == 13) {
                 system("cls");
                 ocultarCursor();
-                jugador_1 N(65, 12, 3);
-                InicializarCampoJuego(campoJuego);
-                ImprimirCampoJuego(campoJuego);
+                //InicializarCampoJuego(campoJuego);
+                //ImprimirCampoJuego(campoJuego);
                 N.pintar();
-                N.pintar_vidas();
-                pelota P(10, 12, 1);
+                pelota P(10, 12, 1, 0);
                 bool game_over = false;
-                while (true) {
+                while (!game_over) {
+                    P.Puntos(N);
+                    N.dibujar_puntajes();
                     P.mover();
                     P.rebote(N);
                     N.mover();
+                    P.Menos(N);
                     pintar_limites();
+                    resultado = N.RESULTADO();
+                    if ( resultado >= 60) {
+                        game_over = true;
+                    }
+                }
+                if (resultado >= 60) {
+                    system("cls");
+                    tabla_Peru();
+                    tabla_Argentina();
+                    tabla_Ecuador();
+                    tabla_Bolivia();
+                    pintarLineas_2();
+                    gotoxi(35, 18); printf("Presione enter para comenzar: ");
+                    char empezar = getch();
+                    if (empezar == 13) {
+                        system("cls");
+                        ocultarCursor();
+                        //InicializarCampoJuego(campoJuego);
+                        //ImprimirCampoJuego(campoJuego);
+                        N2.pintar();
+                        pelota_2 P2(10, 12, 1, 0);
+                        bool game_over = false;
+                        while (!game_over) {
+                            P2.Puntos_2(N2);
+                            N2.dibujar_puntajes();
+                            P2.mover();
+                            P2.rebote(N2);
+                            N2.mover();
+                            P2.Menos(N2);
+                            pintar_limites();
+                            resultado_2 = N2.RESULTADO();
+                            if (resultado_2 >= 60) {
+                                game_over = true;
+                            }
+                        }
+                    }
+                }
+                if (resultado_2 >= 60) {
+                    system("cls");
+                    tabla_Peru();
+                    tabla_Ecuador();
+                    pintarLineas_2();
+                    gotoxi(35, 18); printf("Presione enter para comenzar: ");
+                    char empezar = getch();
+                    if (empezar == 13) {
+                        system("cls");
+                        ocultarCursor();
+                        //InicializarCampoJuego(campoJuego);
+                        //ImprimirCampoJuego(campoJuego);
+                        N3.pintar();
+                        pelota_3 P3(10, 12, 1, 0);
+                        bool game_over = false;
+                        while (!game_over) {
+                            P3.Puntos(N3);
+                            N3.dibujar_puntajes();
+                            P3.mover();
+                            P3.rebote(N3);
+                            N3.mover();
+                            P3.Menos(N3);
+                            pintar_limites();
+                            resultado_3 = N3.RESULTADO();
+                            if (resultado_3 >= 60) {
+                                game_over = true;
+                            }
+                        }
+                    }
+
                 }
             }
         }
+        system("cls");
+        copa();
 
         system("pause>0");
         return 0;

@@ -29,13 +29,13 @@
     <ClInclude Include="juego.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="escenarios.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Elegir_pais.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="tabla_de_posiciones.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="copa.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

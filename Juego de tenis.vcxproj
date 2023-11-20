@@ -127,8 +127,8 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="copa.h" />
     <ClInclude Include="Elegir_pais.h" />
-    <ClInclude Include="escenarios.h" />
     <ClInclude Include="juego.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
