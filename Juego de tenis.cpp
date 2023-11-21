@@ -2,9 +2,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <windows.h>
+#include "campo.h"
 #include "juego.h"  
 #include <stdio.h>
+#include "instruciones.h";
 #include "copa.h"
+#include "creditos.h"
+
 #include "Elegir_pais.h"
 #include "tabla_de_posiciones.h"
 
@@ -54,136 +58,155 @@ void presentacion() {
 int main() {
     int option, resultado, resultado_2, resultado_3;
     int Seleccion;
-    presentacion();
-    gotoxi(24, 5 + 17);
     jugador_1 N(65, 12, 0, 0);
-    jugador_2 N2(65, 12, 0, 0);
-    jugador_3 N3(65, 12, 0, 0);
-    printf("Elige una opcion: ");
-    cin >> option;
-
-
-    if (option == 1) {
-        system("cls");
-        Peru();
-        Argentina();
-        Paraguay();
-        Brazil();
-        Venezuela();
-        Ecuador();
-        Bolivia();
-        Colombia();
-        Uruguay();
-        Chile();
+    referi R(38, 5);
+    
+    do {
+        // Mostrar el menú
+        presentacion();
         gotoxi(24, 5 + 17);
-        printf("Elegir a tu pais: ");
-        cin >> Seleccion;
-        if (Seleccion >= 1 && Seleccion <= 10) {
-            system("cls");
-            tabla_Peru();
-            tabla_Argentina();
-            tabla_Paraguay();
-            tabla_Brazil();
-            tabla_Venezuela();
-            tabla_Ecuador();
-            tabla_Bolivia();
-            tabla_Colombia();
-            tabla_Uruguay();
-            tabla_Chile();
-            pintarLineas();
-            gotoxi(35, 18); printf("Presione enter para comenzar: ");
-            char empezar = getch();
-            if (empezar == 13) {
-                system("cls");
-                ocultarCursor();
-                //InicializarCampoJuego(campoJuego);
-                //ImprimirCampoJuego(campoJuego);
-                N.pintar();
-                pelota P(10, 12, 1, 0);
-                bool game_over = false;
-                while (!game_over) {
-                    P.Puntos(N);
-                    N.dibujar_puntajes();
-                    P.mover();
-                    P.rebote(N);
-                    N.mover();
-                    P.Menos(N);
-                    pintar_limites();
-                    resultado = N.RESULTADO();
-                    if ( resultado >= 60) {
-                        game_over = true;
-                    }
-                }
-                if (resultado >= 60) {
-                    system("cls");
-                    tabla_Peru();
-                    tabla_Argentina();
-                    tabla_Ecuador();
-                    tabla_Bolivia();
-                    pintarLineas_2();
-                    gotoxi(35, 18); printf("Presione enter para comenzar: ");
-                    char empezar = getch();
-                    if (empezar == 13) {
-                        system("cls");
-                        ocultarCursor();
-                        //InicializarCampoJuego(campoJuego);
-                        //ImprimirCampoJuego(campoJuego);
-                        N2.pintar();
-                        pelota_2 P2(10, 12, 1, 0);
-                        bool game_over = false;
-                        while (!game_over) {
-                            P2.Puntos_2(N2);
-                            N2.dibujar_puntajes();
-                            P2.mover();
-                            P2.rebote(N2);
-                            N2.mover();
-                            P2.Menos(N2);
-                            pintar_limites();
-                            resultado_2 = N2.RESULTADO();
-                            if (resultado_2 >= 60) {
-                                game_over = true;
-                            }
-                        }
-                    }
-                }
-                if (resultado_2 >= 60) {
-                    system("cls");
-                    tabla_Peru();
-                    tabla_Ecuador();
-                    pintarLineas_2();
-                    gotoxi(35, 18); printf("Presione enter para comenzar: ");
-                    char empezar = getch();
-                    if (empezar == 13) {
-                        system("cls");
-                        ocultarCursor();
-                        //InicializarCampoJuego(campoJuego);
-                        //ImprimirCampoJuego(campoJuego);
-                        N3.pintar();
-                        pelota_3 P3(10, 12, 1, 0);
-                        bool game_over = false;
-                        while (!game_over) {
-                            P3.Puntos(N3);
-                            N3.dibujar_puntajes();
-                            P3.mover();
-                            P3.rebote(N3);
-                            N3.mover();
-                            P3.Menos(N3);
-                            pintar_limites();
-                            resultado_3 = N3.RESULTADO();
-                            if (resultado_3 >= 60) {
-                                game_over = true;
-                            }
-                        }
-                    }
+        printf("Elige una opcion: ");
+        cin >> option;
 
+        // Procesar la opción seleccionada
+        switch (option) {
+        case 1:
+            system("cls");
+            Peru();
+            Argentina();
+            Paraguay();
+            Brazil();
+            Venezuela();
+            Ecuador();
+            Bolivia();
+            Colombia();
+            Uruguay();
+            Chile();
+            gotoxi(24, 5 + 17);
+            printf("Elegir a tu pais: ");
+            cin >> Seleccion;
+            if (Seleccion >= 1 && Seleccion <= 10) {
+                system("cls");
+                gotoxi(37, 9);  printf("PAISES    | PT | PJ |");
+                gotoxi(37, 10); printf("%d         | 0  | 0  |", Seleccion);
+                gotoxi(37, 11); printf("Uruguay   | 0  |  0 |");
+                gotoxi(37, 12); printf("Argentina | 0  |  0 |");
+                gotoxi(37, 13); printf("Brazil    | 0  |  0 |");
+                gotoxi(37, 14); printf("Chile     | 0  |  0 |");
+                gotoxi(37, 15); printf("Venezuela | 0  |  0 |");
+                gotoxi(37, 16); printf("Ecuador   | 0  |  0 |");
+                gotoxi(37, 17); printf("Colombia  | 0  |  0 |");
+                gotoxi(37, 18); printf("Paraguay  | 0  |  0 |");
+                gotoxi(37, 19); printf("Bolivia   | 0  |  0 |");
+                gotoxi(32, 22); printf("Presione enter para comenzar: ");
+                char empezar = getch();
+                if (empezar == 13) {
+                    system("cls");
+                    ocultarCursor();
+                    mostrarcampo();
+                    pelota P(10, 12, 1, 0);
+                    jugador_1 N2(65, 12, 0, 0);
+                    N2.pintar();
+                    bool game_over = false;
+                    while (!game_over) {
+                        R.dibujar_referi();
+                        P.Puntos(N2, R);
+                        N2.dibujar_puntajes();
+                        P.mover();
+                        P.rebote(N2);
+                        N2.mover();
+                        P.Menos(N2);
+                        pintar_limites();
+                        resultado = N2.RESULTADO();
+                        if (resultado >= 60) {
+                            game_over = true;
+                        }
+                    }
+                    if (resultado >= 60) {
+                        system("cls");
+                        system("cls");
+                        gotoxi(37, 9);  printf("PAISES    | PT | PJ |");
+                        gotoxi(37, 10); printf("%d         | 0  | 0  |", Seleccion);
+                        gotoxi(37, 11); printf("Uruguay   | 0  |  0 |");
+                        gotoxi(37, 12); printf("Argentina | 0  |  0 |");
+                        gotoxi(32, 18); printf("Presione enter para comenzar: ");
+                        char empezar = getch();
+                        if (empezar == 13) {
+                            system("cls");
+                            ocultarCursor();
+                            mostrarcampo();
+                            N.pintar();
+                            pelota_2 P2(10, 12, 1, 0);
+                            bool game_over = false;
+                            while (!game_over) {
+                                R.dibujar_referi();
+                                P2.Puntos_2(N, R);
+                                N.dibujar_puntajes();
+                                P2.mover();
+                                P2.rebote(N);
+                                N.mover();
+                                P2.Menos(N);
+                                pintar_limites();
+                                resultado_2 = N.RESULTADO();
+                                if (resultado_2 >= 60) {
+                                    game_over = true;
+                                }
+                            }
+                        }
+                    }
+                    if (resultado_2 == 60) {
+                        system("cls");
+                        tabla_Peru();
+                        tabla_Ecuador();
+                        pintarLineas_2();
+                        gotoxi(35, 18); printf("Presione enter para comenzar: ");
+                        char empezar = getch();
+                        if (empezar == 13) {
+                            system("cls");
+                            ocultarCursor();
+                            mostrarcampo();
+                            jugador_1 N3(65, 12, 0, 0);
+                            pelota_3 P3(10, 12, 1, 0);
+                            N3.pintar();
+                            bool game_over = false;
+                            while (!game_over) {
+                                R.dibujar_referi();
+                                P3.Puntos(N3, R);
+                                N3.dibujar_puntajes();
+                                P3.mover();
+                                P3.rebote(N3);
+                                N3.mover();
+                                P3.Menos(N3, R);
+                                pintar_limites();
+                                resultado_3 = N3.RESULTADO();
+                                if (resultado_3 >= 60) {
+                                    game_over = true;
+                                }
+                            }
+                        }
+                    }
                 }
             }
+            break;
+        case 2:
+            system("cls");
+            reglas();
+            break;
+        case 3:
+            system("cls");
+            creditos(); 
+            break;
+        case 4:
+            std::cout << "Saliendo del juego. ¡Hasta luego!\n";
+            break;
+        default:
+            std::cout << "Opción no válida. Inténtalo de nuevo.\n";
+            break;
         }
-        system("cls");
-        copa();
+    } while (option != 4);
 
-        system("pause>0");
-        return 0;
-    }
+    
+    system("pause>0");
+    return 0;
 }
 
