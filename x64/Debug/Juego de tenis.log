@@ -1,13 +1,13 @@
 ﻿  Juego de tenis.cpp
-C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\juego.h(89,6): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _kbhit. See online help for details.
-C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\juego.h(90,16): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
-C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(8,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\juego.h(93,6): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _kbhit. See online help for details.
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\juego.h(94,16): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(9,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
 C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Elegir_pais.h(5,1): warning C4005: 'FILAS': redefinición de macro
 C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\campo.h(5,1): message : vea la definición anterior de 'FILAS'
 C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Elegir_pais.h(7,1): warning C4005: 'COLUMNAS': redefinición de macro
 C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\campo.h(7,1): message : vea la definición anterior de 'COLUMNAS'
-C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(102,32): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
-C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(133,40): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
-C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(163,40): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(115,32): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(157,40): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+C:\Users\P65 CREATOR\source\repos\Juego de tenis\Juego de tenis\Juego de tenis.cpp(198,40): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   AssemblyInfo.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   Juego de tenis.vcxproj -> C:\Users\P65 CREATOR\source\repos\Juego de tenis\x64\Debug\Juego de tenis.exe

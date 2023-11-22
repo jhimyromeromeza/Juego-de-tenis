@@ -131,6 +131,7 @@
     <ClInclude Include="copa.h" />
     <ClInclude Include="creditos.h" />
     <ClInclude Include="Elegir_pais.h" />
+    <ClInclude Include="game_over.h" />
     <ClInclude Include="instruciones.h" />
     <ClInclude Include="juego.h" />
     <ClInclude Include="pch.h" />

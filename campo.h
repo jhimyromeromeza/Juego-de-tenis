@@ -62,6 +62,6 @@ void mostrarcampo() {
             cout << (char)219;
         }
         cout << endl;
-
+        
     }
 }

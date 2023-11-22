@@ -125,6 +125,7 @@ void Peru() {
 
     }
     printf("1. Peru\n");
+    std::cout << "\033[0m";
 }
 void Argentina() {
     for (int f = 0; f < FILAS; f++) {
@@ -140,6 +141,7 @@ void Argentina() {
     }
     gotoxi(20, 8);
     printf("2. Argentina\n");
+    std::cout << "\033[0m";
 }
 void Paraguay() {
     for (int f = 0; f < FILAS; f++) {
@@ -155,6 +157,7 @@ void Paraguay() {
     }
     gotoxi(40, 8);
     printf("3. Paraguay\n");
+    std::cout << "\033[0m";
 }
 void Brazil() {
     for (int f = 0; f < FILAS; f++) {
@@ -170,6 +173,7 @@ void Brazil() {
     }
     gotoxi(60, 8);
     printf("4. Brazil\n");
+    std::cout << "\033[0m";
 }
 void Venezuela() {
     for (int f = 0; f < FILAS; f++) {
@@ -186,6 +190,7 @@ void Venezuela() {
     }
     gotoxi(80, 8);
     printf("5. Venezuela\n");
+    std::cout << "\033[0m";
 }
 void Ecuador() {
     for (int f = 0; f < FILAS; f++) {
@@ -201,6 +206,7 @@ void Ecuador() {
     }
     gotoxi(1, 16);
     printf("6. Ecuador\n");
+    std::cout << "\033[0m";
 }
 void Bolivia() {
     for (int f = 0; f < FILAS; f++) {
@@ -217,6 +223,7 @@ void Bolivia() {
     }
     gotoxi(20, 16);
     printf("7. Bolivia\n");
+    std::cout << "\033[0m";
 }
 void Colombia() {
     for (int f = 0; f < FILAS; f++) {
@@ -233,6 +240,7 @@ void Colombia() {
     }
     gotoxi(40, 16);
     printf("8. Colombia\n");
+    std::cout << "\033[0m";
 }
 void Uruguay() {
     for (int f = 0; f < FILAS; f++) {
@@ -248,6 +256,7 @@ void Uruguay() {
     }
     gotoxi(60, 16);
     printf("9. Uruaguay\n");
+    std::cout << "\033[0m";
 }
 void Chile() {
     for (int f = 0; f < FILAS; f++) {

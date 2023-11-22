@@ -54,13 +54,14 @@ void referi::alzar_mano() {
 }
 // jugado1 and movimiento borrar and dibujar
 class jugador_1 {
-	int x, y, puntos, set;
+	int x, y, puntos, puntos2;
 	bool estadoPintado;
 public:
-	jugador_1(int _x, int _y, int _puntos, int _set) : x(_x), y(_y), puntos(_puntos), set(_set) {}
+	jugador_1(int _x, int _y, int _puntos, int _set) : x(_x), y(_y), puntos(_puntos), puntos2(_set) {}
 	int X() { return x; }
 	int Y() { return y; }
 	int RESULTADO() { return puntos; }
+	int RESULTADO2() { return puntos2; }
 	int PUNTOS_PERDIDOS();
 	int PUNTOS_GANADOS();
 	void pintar();
@@ -71,19 +72,22 @@ public:
 };
 
 void jugador_1::pintar() {
+	
 	gotoxi(x, y); printf(" O ");
 	gotoxi(x, y + 1); printf("/| ");
-	gotoxi(x, y + 2); printf("/| ");
+	gotoxi(x, y + 2); printf("/ \\");
 }
 void jugador_1::borrar() {
-	gotoxi(x, y); printf("   ");
+	
+	gotoxi(x, y ); printf("   ");
 	gotoxi(x, y + 1); printf("   ");
 	gotoxi(x, y + 2); printf("   ");
 }
 void jugador_1::pintarOtro() {
-	gotoxi(x, y); printf(" O ");
-	gotoxi(x, y + 1); printf(" |-");
-	gotoxi(x, y + 2); printf(" |-");
+	
+	gotoxi(x, y); printf("\\O ");
+	gotoxi(x, y + 1); printf(" |\\");
+	gotoxi(x, y + 2); printf("/ \\");
 }
 void jugador_1::mover() {
 	if (kbhit()) {
@@ -105,6 +109,7 @@ void jugador_1::mover() {
 }
 
 int jugador_1::PUNTOS_PERDIDOS() {
+	puntos2 += 15;
 	if (puntos >= 15) {
 		puntos -= 15;
 	}
@@ -115,6 +120,9 @@ int jugador_1::PUNTOS_PERDIDOS() {
 }
 int jugador_1::PUNTOS_GANADOS(){ 
 	puntos += 15;
+	if (puntos2 >= 15) {
+		puntos2 -= 15;
+	}
 	if (puntos >60) {
 		puntos = 60;
 	}
@@ -122,7 +130,7 @@ int jugador_1::PUNTOS_GANADOS(){
 }
 void jugador_1::dibujar_puntajes() {
 	gotoxi(50, 4); printf("Puntos  %d", puntos);
-	gotoxi(50, 5); printf("Set     %d", set);
+	gotoxi(10, 4); printf("Puntos  %d", puntos2);
 }
 // jugador movimiento and dibujar, delet and caminar
 // pintar limites de cancha tenis
@@ -160,14 +168,12 @@ public:
 void pelota::pintar() {
 	std::cout << "\033[104m";
 	gotoxi(x, y);
-	std::cout << "\033[0m";
-	std::cout << "\033[104m";
 	printf("%c", 184);
+
 }
 void pelota::borrar() {
-	gotoxi(x, y);
-	std::cout << "\033[0m";
 	std::cout << "\033[104m";
+	gotoxi(x, y);
 	printf(" ");
 }
 void pelota::mover() {
@@ -231,13 +237,11 @@ public:
 
 void pelota_2::pintar() {
 	gotoxi(x, y);
-	std::cout << "\033[0m";
 	std::cout << "\033[104m";
 	printf("%c", 184);
 }
 void pelota_2::borrar() {
 	gotoxi(x, y);
-	std::cout << "\033[0m";
 	std::cout << "\033[104m";
 	printf(" ");
 }
